@@ -67,6 +67,73 @@ body{
 .t-dot{width:12px; height:12px; border-radius:50%; background:linear-gradient(45deg, var(--primary), var(--secondary)); box-shadow:0 0 12px rgba(255,255,255,.35)}
 .muted{color:var(--muted)}
 
+
+/* Foto no tema futurista */
+.hero-media img.profile-photo,
+.about-media img.profile-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  outline: 1px solid rgba(255,255,255,0.06);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.35),
+    0 1px 0 rgba(255,255,255,0.05) inset;
+}
+
+/* Grid da HERO com foto */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr; /* texto | imagem */
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-media {
+    order: -1; /* imagem acima do texto em telas menores */
+  }
+}
+
+/* Seção Sobre (caso use a opção B) */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr; /* imagem | texto */
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Glow sutil na moldura */
+.hero-media, .about-media {
+  position: relative;
+}
+.hero-media::after, .about-media::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(0,240,255,0.18), rgba(152,0,255,0.12));
+  filter: blur(14px);
+  z-index: -1;
+}
+
+/* Acessibilidade: foco visível via teclado */
+.hero-media img.profile-photo:focus,
+.about-media img.profile-photo:focus {
+  outline: 2px solid #00f0ff;
+  outline-offset: 4px;
+}
+
+
 /* Contact */
 .contact{display:flex; gap:12px}
 
