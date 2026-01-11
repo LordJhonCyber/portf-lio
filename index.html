@@ -26,27 +26,29 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Tecnologia & Desenvolvimento</p>
-          <h1 id="hero-title">Construindo soluções <span class="grad">seguras</span> e <span class="grad2">escaláveis</span>.</h1>
-          <p class="lead">Automação, monitoramento e integração de sistemas. Foco em confiabilidade, CI/CD, IaC e segurança aplicada a operações.</p>
-          <div class="cta-row">
-            <a class="btn btn-neon" href="JhonWictorCurrículo.pdf" download>Baixar CV</a>
-            <a class="btn btn-ghost" href="https://github.com/LordJhonCyber" target="_blank" rel="noopener">Ver GitHub</a>
-          </div>
-          <div class="stack">
-            <span>Azure</span><span>Docker</span><span>Terraform</span><span>K8s</span><span>Linux</span><span>Python</span>
-          </div>
-        </div>
-        <figure class="hero-media">
-          <img src="assets/tech-hero.gif" alt="Animação temática tecnológica" loading="eager"/>
-        </figure>
-      </div>
-      <div class="gridlines" aria-hidden="true"></div>
-    </section>
+    
+<!-- SOBRE -->
+<section class="container section about" aria-labelledby="about-title">
+  <h2 id="about-title" class="section-title">Sobre</h2>
+  <div class="about-grid">
+    <figure class="about-media">
+      <picture>
+        <source type="image/webp"
+                srcset="
+                  profile_imagens/profile-480.webp 480w,
+                  profile_imagens/profile-768.webp 768w,
+                  profile_imagens/profile-1200.webp 1200w,
+                  profile_imagens/profile-2000.webp 2000w"
+                sizes="(max-width: 600px)/profile-480.jpg 480w,
+                  profile_imagens/profile-768.jpg 768w,
+                  profile_imagens/profile-1200.jpg 1200w,
+                  profile_imagens/profile-2000.jpg 2000w"
+                sizes="(max-width: 600px) 90vw, (max-width: 900px) 86 loading="lazy"
+             com foco em confiabilidade operacional, automação (CI/CD) e infraestrutura como código (IaC) em ambientes Azure e Linux.</p>
+      <p>Experiência com monitoramento, hardening e integração de sistemas (CFTV, alarmes e supervisório), aplicando boas práticas de segurança e observabilidade.</p>
+    </div>
+  </div>
+</section>
 
     <!-- PROJETOS -->
     <section id="projetos" class="container section" aria-labelledby="proj-title">
